@@ -41,10 +41,45 @@ document.getElementById('test-button').addEventListener('click', function(){
     targetArticle.classList.add('active');
   };
   
+
+  const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles',
+
+
+function generateTitleLinks(customSelector = '') {
+
+  /* remove contents of titleList */
+  const titleList = document.querySelector(optTitleListSelector);
+  function clearMessages() {
+    titleList.innerHTML = '';
+  }
+  clearMessages();
+  /* for each article */
+  const articles = document.querySelectorAll(optArticleSelector + customSelector);
+  let html = '';
+
+  for (let article of articles) {
+
+    /* get the article id */
+    const articleId = article.getAttribute('id');
+    console.log(articleId);
+    /* find the title element */
+    const titleElement = article.querySelector(optTitleSelector);
+    /* get the title from the title element */
+    const title = titleElement.innerHTML;
+    /* create HTML of the link */
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+    /* insert link into titleList */
+    html = html + linkHTML;
+
+  }
+  titleList.innerHTML = html;
+
   const links = document.querySelectorAll('.titles a');
-  
-  for(let link of links){
+  for (let link of links) {
     link.addEventListener('click', titleClickHandler);
   }
-
+}
+generateTitleLinks();
 }
