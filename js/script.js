@@ -42,9 +42,9 @@ document.getElementById('test-button').addEventListener('click', function(){
   };
   
 
-  const optArticleSelector = '.post',
-  optTitleSelector = '.post-title',
-  optTitleListSelector = '.titles',
+  const optArticleSelector = '.post';
+  optTitleSelector = '.post-title';
+  optTitleListSelector = '.titles';
 
 
 function generateTitleLinks(customSelector = '') {
