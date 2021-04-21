@@ -69,7 +69,7 @@ function generateTitleLinks(customSelector = '') {
     /* get the title from the title element */
     const title = titleElement.innerHTML;
     /* create HTML of the link */
-    const linkHTML= '<li><a href="#' + articleId + '"><span>' + titleElement + '</span></a></li>';
+    const linkHTML= '<li><a href="#' + articleId + '"><span>' + title + '</span></a></li>';
     /* insert link into titleList */
     html = html + linkHTML;
 
