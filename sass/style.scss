@@ -118,3 +118,28 @@ body {
     margin: 0 10px 0 0;
   }
 }
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    display: inline;
+    .tag-size-1 {
+      font-size: 13px;
+    }
+    .tag-size-2 {
+      font-size: 16px;
+    }
+    .tag-size-3 {
+      font-size: 19px;
+    }
+    .tag-size-4 {
+      font-size: 22px;
+    }
+    .tag-size-5 {
+      font-size: 25px;
+    }
+    margin-left: 10px;
+  }
+}
